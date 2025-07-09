@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-import Button from "./button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMediaQuery } from "../hooks";
 import { FaBars, FaSun, FaTimes } from "react-icons/fa";
 import { Transition } from "@headlessui/react";
@@ -10,23 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectDarkMode, setDarkMode } from "../state/slices/globalReducer";
 import clsx from "clsx";
 function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const darkmode = useSelector(selectDarkMode);
   const dispatch = useDispatch();
   const mobile = useMediaQuery("(max-width: 640px)");
   const [open, setOpen] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroHeight =
-        document.getElementById("hero-section")?.offsetHeight || 300;
-      const scrollY = window.scrollY;
-      setScrolled(scrollY > heroHeight - 60);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const handleScrollToElem = (id: string) => {
     const elem = document.getElementById(id);
@@ -65,14 +51,11 @@ function Header() {
             leaveTo="-translate-y-full"
           >
             <div
-              className={`absolute ${
-                scrolled ? "bg-white" : "bg-black/80"
-              } w-full h-[250px] flex items-start flex-col top-20 z-50 shadow-2xl left-0 p-5 gap-y-3`}
+              className={`absolute bg-black/80 w-full h-[250px] flex items-start flex-col top-20 z-50 shadow-2xl left-0 p-5 gap-y-3`}
             >
               <div
-                className={`flex items-start flex-col space-y-5 ${
-                  scrolled ? "text-black " : "text-white"
-                } transition-colors duration-300 font-normal text-[16px]`}
+                className={`flex items-start flex-col space-y-5 
+                   text-white transition-colors duration-300 font-normal text-[16px]`}
               >
                 <Link
                   to={"/"}

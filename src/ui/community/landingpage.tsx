@@ -5,24 +5,7 @@ import { selectDarkMode } from "../../state/slices/globalReducer";
 import { motion } from "framer-motion";
 import { animationVariants } from "../../constant";
 import { useMediaQuery } from "../../hooks";
-const sectionFadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
 
-const cardsStagger = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2,
-    },
-  },
-};
 function LandingPage() {
   const darkmode = useSelector(selectDarkMode);
   const isMobile = useMediaQuery("(max-width: 640px)");

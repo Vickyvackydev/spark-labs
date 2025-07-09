@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import {
   BRAND,
   NEON,
-  POINTER,
   POINTER_WHITE,
   WURLET_FRAME_1,
   WURLET_FRAME_10,
@@ -46,25 +45,6 @@ const itemFadeUp = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
-
-const sectionFadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
-
-const cardsStagger = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2,
-    },
   },
 };
 
