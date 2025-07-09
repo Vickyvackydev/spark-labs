@@ -9,14 +9,14 @@ function Footer() {
   const darkmode = useSelector(selectDarkMode);
   return (
     <motion.div
-      className="w-full h-full p-10"
+      className="w-full h-full lg:p-10 p-5"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
       variants={animationVariants.footerContainer}
     >
       {/* Logo */}
-      <motion.div variants={animationVariants.fadeUp} className="p-10">
+      <motion.div variants={animationVariants.fadeUp} className="lg:p-10 p-5">
         <img
           src={darkmode ? LIGHT_MODE_FOOTER_LOGO : SPARK_LABS_FOOTER_LOGO}
           className="w-full object-contain h-full"
@@ -25,7 +25,7 @@ function Footer() {
       </motion.div>
 
       {/* Footer Text Columns */}
-      <div className="w-full flex items-start justify-between">
+      <div className="w-full flex items-start lg:flex-row flex-col gap-y-6 justify-between">
         <motion.span
           variants={animationVariants.fadeUp}
           className={clsx(

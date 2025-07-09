@@ -21,14 +21,14 @@ function Contact() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="p-10 flex items-start justify-between"
+        className="lg:p-10 p-5 w-full flex items-start lg:flex-row flex-col justify-between"
       >
         {/* Left title */}
         <motion.span
           variants={fadeUp}
           custom={0}
           className={clsx(
-            "text-[80px] font-anton leading-20",
+            "lg:text-[80px] text-[60px] font-anton lg:leading-20 leading-[60px]",
             darkmode ? "text-custom" : "text-custom-black"
           )}
         >
@@ -40,7 +40,7 @@ function Contact() {
           variants={fadeUp}
           custom={1}
           className={clsx(
-            "flex flex-col gap-y-10 w-[547px] font-inter font-medium text-2xl",
+            "flex flex-col gap-y-10 lg:w-[547px] w-full lg:mt-0 mt-5 font-inter font-medium lg:text-2xl text-lg",
             darkmode ? "text-custom" : "text-custom-black"
           )}
         >

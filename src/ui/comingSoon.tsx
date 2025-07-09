@@ -9,7 +9,7 @@ function ComingSoon() {
   const [selectedSection, setSelectedSection] = useState(0);
   const darkmode = useSelector(selectDarkMode);
   return (
-    <div className="p-10 w-full flex flex-col gap-y-7">
+    <div className="lg:p-10 p-5 w-full flex flex-col gap-y-7">
       {comingSoon.map((item, index, arr) => (
         <motion.div
           key={item.label}
@@ -48,7 +48,7 @@ function ComingSoon() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 src={item.img}
-                className="absolute w-[200px] h-[200px]"
+                className="absolute w-[200px] h-[200px] lg:block hidden"
                 style={{ right: `${index * arr.length}px` }}
                 alt=""
               />

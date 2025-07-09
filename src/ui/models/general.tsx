@@ -238,9 +238,9 @@ function General() {
     //   </div>
     // </div>
 
-    <div className="flex flex-col gap-y-5 font-inter">
+    <div className="flex flex-col gap-y-5 font-inter w-full">
       <motion.span
-        className="text-custom font-semibold pl-10 -mb-12 text-lg"
+        className="text-custom font-semibold lg:pl-10 pl-5 lg:-mb-12 -mb-6 text-lg"
         initial={fadeUp.initial}
         animate={fadeUp.animate}
         transition={{ delay: 0.1, ...fadeUp.transition }}
@@ -249,7 +249,7 @@ function General() {
       </motion.span>
 
       <motion.div
-        className="flex p-10 items-center justify-between gap-x-5 w-full"
+        className="flex lg:p-10 p-5 items-center justify-between lg:flex-row flex-col gap-5 w-full"
         initial={fadeUp.initial}
         whileInView={fadeUp.animate}
         viewport={{ once: true }}
@@ -257,7 +257,7 @@ function General() {
       >
         {/* Box 1 */}
         <motion.div className="bg-[#002FA3] rounded-xl p-5 w-full" {...fadeUp}>
-          <div className="max-h-[600px]">
+          <div className="lg:max-h-[600px] max-h-full">
             <span className="text-lg font-semibold text-custom">
               Unsure what fits you best now?
             </span>
@@ -277,7 +277,7 @@ function General() {
 
         {/* Box 2 */}
         <motion.div className="bg-[#E2E2E5] rounded-xl w-full p-5" {...fadeUp}>
-          <div className="max-h-[600px]">
+          <div className="lg:max-h-[600px] max-h-full">
             <span className="text-2xl leading-1.5 font-semibold text-custom-black">
               1. Short-term or <br /> One-time Engagement
             </span>
@@ -310,7 +310,7 @@ function General() {
 
         {/* Box 3 */}
         <motion.div className="bg-[#E2E2E5] rounded-xl w-full p-5" {...fadeUp}>
-          <div className="max-h-[600px]">
+          <div className="lg:max-h-[600px] max-h-full">
             <span className="text-2xl leading-1.5 font-semibold text-custom-black">
               2. Long-term / Service <br /> supply / Subscription
             </span>
@@ -342,7 +342,7 @@ function General() {
       </motion.div>
 
       <motion.div
-        className="flex p-10 items-center justify-between gap-x-5 w-full"
+        className="flex lg:p-10 p-5 items-center justify-between gap-5 lg:flex-row flex-col w-full"
         initial={fadeUp.initial}
         whileInView={fadeUp.animate}
         viewport={{ once: true }}
@@ -350,7 +350,7 @@ function General() {
       >
         {/* Box 4 */}
         <motion.div className="bg-[#262627] rounded-xl p-5 w-full" {...fadeUp}>
-          <div className="max-h-[650px]">
+          <div className="lg:max-h-[650px] max-h-full">
             <span className="text-sm font-medium text-custom">
               * Driven by the stage your business is going through and its
               immediate needs, rather than by your company size: for example, a
@@ -377,7 +377,7 @@ function General() {
 
         {/* Box 5 */}
         <motion.div className="bg-[#E2E2E5] rounded-xl w-full p-5" {...fadeUp}>
-          <div className="max-h-[650px]">
+          <div className="lg:max-h-[650px] max-h-full">
             <span className="text-2xl leading-1.5 font-semibold text-custom-black">
               Design Systems, Templates, Baseline self-serve tools
             </span>
@@ -438,7 +438,7 @@ function General() {
 
         {/* Box 6 */}
         <motion.div className="bg-[#E2E2E5] rounded-xl w-full p-5" {...fadeUp}>
-          <div className="max-h-[650px]">
+          <div className="lg:max-h-[650px] max-h-full">
             <span className="text-2xl leading-1.5 font-semibold text-custom-black">
               Assets delivery / <br />
               Tools

@@ -72,4 +72,5 @@ export { default as ARROW_ICON } from "./icons/arrow-icon.svg";
 export { default as SPARK_LABS_FOOTER_LOGO } from "./images/spark-footer-logo.svg";
 export { default as HOME_LAST_FRAME } from "./images/home-last-frame.png";
 export { default as LIGHT_LOGO } from "./images/light-logo.svg";
+export { default as MOBILE_VIEW } from "./images/mobile-view.png";
 export { default as LIGHT_MODE_FOOTER_LOGO } from "./images/light-mode-footer-logo.svg";

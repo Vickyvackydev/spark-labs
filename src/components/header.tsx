@@ -39,22 +39,20 @@ function Header() {
     <>
       {mobile ? (
         <div
-          className={`w-full top-0 z-50 flex items-center justify-between p-5 fixed ${
-            scrolled
-              ? "bg-white shadow-md "
-              : open
-              ? "bg-black/80"
-              : "bg-transparent"
-          } transition-colors duration-300 `}
+          className={`w-full top-0 z-50 flex items-center justify-between p-5 transition-colors duration-300 `}
         >
           <Link to={"/"}>
-            <img src={""} className="w-[113.62px] h-[42px]" alt="" />
+            <img
+              src={darkmode ? LIGHT_LOGO : SPARK_LABS}
+              className="w-[113.62px] h-[42px]"
+              alt=""
+            />
           </Link>
           <div onClick={() => setOpen((prev) => !prev)}>
             {open ? (
-              <FaTimes color={scrolled ? "black" : "white"} />
+              <FaTimes color={darkmode ? "white" : "black"} />
             ) : (
-              <FaBars color={scrolled ? "black" : "white"} />
+              <FaBars color={darkmode ? "white" : "black"} />
             )}
           </div>
           <Transition
@@ -76,37 +74,60 @@ function Header() {
                   scrolled ? "text-black " : "text-white"
                 } transition-colors duration-300 font-normal text-[16px]`}
               >
-                <span
-                  onClick={() => handleScrollToElem("hero-section")}
+                <Link
+                  to={"/"}
+                  onClick={() => {
+                    handleScrollToElem("projects");
+                    setOpen(false);
+                  }}
                   className="cursor-pointer"
                 >
-                  Home
-                </span>
-                <span
-                  onClick={() => handleScrollToElem("about")}
+                  Projects
+                </Link>
+                <Link
+                  to={"/models"}
+                  onClick={() => setOpen(false)}
                   className="cursor-pointer"
                 >
-                  About Us
-                </span>
-                <span
-                  onClick={() => handleScrollToElem("why-fend")}
+                  Models, Pricing and Solution
+                </Link>
+                <Link
+                  to={"/contact"}
+                  onClick={() => setOpen(false)}
                   className="cursor-pointer"
                 >
-                  Why Fend
-                </span>
-                <span
-                  onClick={() => handleScrollToElem("contact")}
+                  Contact Us
+                </Link>
+                <Link
+                  to={"/"}
+                  onClick={() => setOpen(false)}
                   className="cursor-pointer"
                 >
-                  Contact
-                </span>
+                  Book a call
+                </Link>
               </div>
-              <Button
-                title={"Get a Quote"}
-                handleClick={() => {}}
-                btnStyles={"px-4 py-2"}
-                textStyle={""}
-              />
+              <button
+                onClick={() => {
+                  if (darkmode) {
+                    dispatch(setDarkMode(false));
+                  } else {
+                    dispatch(setDarkMode(true));
+                  }
+                }}
+                className={clsx(
+                  "w-16 h-8 rounded-full flex items-center px-1 lg:hidden transition-colors duration-300",
+                  darkmode
+                    ? "bg-black justify-end"
+                    : "bg-white justify-start border"
+                )}
+              >
+                <div
+                  className={clsx(
+                    "w-6 h-6 rounded-full transition-all duration-300",
+                    darkmode ? "bg-white" : "bg-black"
+                  )}
+                />
+              </button>
             </div>
           </Transition>
         </div>
@@ -118,11 +139,11 @@ function Header() {
           )}
         >
           <Link to={"/"}>
-            {darkmode ? (
-              <img src={LIGHT_LOGO} className="w-[170px] h-[39px]" alt="" />
-            ) : (
-              <img src={SPARK_LABS} className="w-[170px] h-[39px]" alt="" />
-            )}
+            <img
+              src={darkmode ? LIGHT_LOGO : SPARK_LABS}
+              className="w-[170px] h-[39px]"
+              alt=""
+            />
           </Link>
           <div className="w-fit text-xs  px-2 py-1 rounded-lg text-[#D7D7D7] font-normal flex items-center gap-x-3.5 bg-[#38383B]">
             <Link onClick={() => handleScrollToElem("projects")} to={""}>

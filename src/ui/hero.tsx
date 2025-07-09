@@ -21,7 +21,7 @@ function Hero() {
       initial="hidden"
       animate="show"
       className={clsx(
-        "w-full flex items-start flex-col gap-y-3 transition-colors duration-500 mt-10 px-10"
+        "w-full flex items-start flex-col gap-y-3 transition-colors duration-500 lg:mt-10 mt-5 lg:px-10 px-5"
       )}
     >
       <motion.div
@@ -32,18 +32,18 @@ function Hero() {
       >
         <div
           className={clsx(
-            "w-fit px-3 py-2 rounded-full flex items-center gap-x-2.5 border-2 border-[#48484826]",
+            "w-fit lg:px-3 px-2 lg:py-2 py-1 rounded-full flex items-center gap-x-2.5 border-2 border-[#48484826]",
             darkmode && "border-[#FFFFFF26]"
           )}
         >
           <img
             src={BLINKER}
-            className="w-[20px] h-[20px] animate-pulse"
+            className="lg:w-[20px] lg:h-[20px] w-[10px] h-[10px] animate-pulse"
             alt=""
           />
           <span
             className={clsx(
-              "text-[#1B1B1B] text-lg font-normal",
+              "text-[#1B1B1B] lg:text-lg text-xs font-normal",
               darkmode && "text-white"
             )}
           >
@@ -57,7 +57,7 @@ function Hero() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.4 }}
-        className="flex  flex-col text-[80px] leading-[90px] "
+        className="flex  flex-col lg:text-[80px] text-[30px] lg:leading-[90px] leading-[40px] "
       >
         <span
           className={clsx(
@@ -77,7 +77,7 @@ function Hero() {
         whileInView="show"
         viewport={{ once: true, amount: 0.4 }}
         className={clsx(
-          "text-xl font-medium ",
+          "lg:text-xl text-sm font-medium ",
           darkmode ? "text-custom" : "text-inter-gray"
         )}
       >
@@ -90,7 +90,7 @@ function Hero() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.4 }}
-        className="flex items-center  gap-x-2.5 mt-32 w-full justify-between"
+        className="flex items-center lg:flex-row flex-col  gap-2.5 mt-32 w-full justify-between"
       >
         <div
           className={clsx(
@@ -101,10 +101,10 @@ function Hero() {
           <div className="flex items-start gap-x-2">
             <img
               src={PICTURE_1}
-              className="w-[120px] h-[108px] object-contain"
+              className="lg:w-[120px] lg:h-[108px] w-[80px] h-[60px] object-contain"
               alt=""
             />
-            <div className="flex flex-col mt-3.5">
+            <div className="flex flex-col lg:mt-3.5 mt-0">
               <span className="text-sm font-medium text-anton-gray font-inter">
                 Models, Pricing & Solutions
               </span>
@@ -131,7 +131,7 @@ function Hero() {
           <div className="flex items-start gap-x-2">
             <img
               src={PICTURE_2}
-              className="w-[120px] h-[108px] object-contain"
+              className="lg:w-[120px] lg:h-[108px] w-[80px] h-[60px] object-contain"
               alt=""
             />
             <div className="flex flex-col mt-3.5">
@@ -157,10 +157,10 @@ function Hero() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.4 }}
-        className="w-full flex items-center justify-between gap-x-5 mt-5 relative"
+        className="w-full flex items-center lg:flex-row flex-col justify-between gap-5 mt-5 relative"
       >
         <div className="w-full bg-[#F6FA5E] p-5 rounded-xl flex flex-col gap-y-5">
-          <span className="text-[92px] font-anton leading-[90px] text-custom-black">
+          <span className="lg:text-[92px] text-[50px] font-anton lg:leading-[90px] leading-[50px] text-custom-black">
             CONTENT AND DESIGN <br /> SYSTEMS
           </span>
           <span className="text-xs font-normal text-custom-black font-inter">
@@ -185,11 +185,11 @@ function Hero() {
         </div>
         <img
           src={CROSS_BORDER_WHITE_MODE}
-          className="w-[263px] h-[110px] absolute left-[40%]"
+          className="w-[263px] h-[110px] lg:block hidden absolute left-[40%]"
           alt=""
         />
         <div className="w-full bg-gray-bgrd p-5  rounded-xl flex flex-col gap-y-5">
-          <span className="text-[92px] h-[270px] font-anton leading-[90px] text-custom">
+          <span className="lg:text-[92px] text-[50px] lg:h-[270px] h-[180px] font-anton lg:leading-[90px] leading-[50px] text-custom">
             SOFTWARE <br /> SOLUTIONS
           </span>
           <span className="text-xs font-normal text-custom font-inter">

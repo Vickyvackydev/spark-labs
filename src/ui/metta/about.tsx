@@ -26,7 +26,7 @@ function MettaAbout() {
   const darkmode = useSelector(selectDarkMode);
   return (
     <motion.div
-      className="px-10 py-20 flex items-start justify-between"
+      className="lg:px-10 px-5 py-20 flex lg:flex-row flex-col gap-y-5 items-start justify-between"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}

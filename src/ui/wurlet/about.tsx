@@ -9,7 +9,7 @@ function AboutWurlet() {
   return (
     <motion.div
       variants={animationVariants.container}
-      className="px-10 py-20 flex items-start justify-between"
+      className="lg:px-10 px-5 lg:flex-row flex-col py-20 flex items-start justify-between"
     >
       <motion.div
         variants={animationVariants.fadeInUp}

@@ -7,7 +7,10 @@ import { animationVariants } from "../../constant";
 function ModelHero() {
   const darkmode = useSelector(selectDarkMode);
   return (
-    <motion.div variants={animationVariants.container} className="p-10 mt-11">
+    <motion.div
+      variants={animationVariants.container}
+      className="lg:p-10 p-5 mt-11"
+    >
       <motion.div
         variants={animationVariants.fadeInUp}
         initial="hidden"
@@ -17,7 +20,7 @@ function ModelHero() {
       >
         <span
           className={clsx(
-            "text-[80px] font-anton  leading-20",
+            "lg:text-[80px] text-[60px] font-anton  lg:leading-20 leading-[60px]",
             darkmode ? "text-custom" : "text-custom-black"
           )}
         >
@@ -29,7 +32,7 @@ function ModelHero() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
-          className="flex items-center justify-between gap-x-5"
+          className="flex items-center lg:flex-row flex-col w-full justify-between gap-5"
         >
           <div className="w-full h-full ">
             <img
@@ -38,7 +41,7 @@ function ModelHero() {
               alt=""
             />
             <div className={clsx("w-full p-5 bg-[#818CA3] rounded-b-xl")}>
-              <span className="text-[50px] mt-3.5 leading-14 font-anton text-[#D3E1FF]">
+              <span className="lg:text-[50px] text-[40px]  font-anton lg:leading-14 leading-12 mt-3.5 text-[#D3E1FF]">
                 {"content".toUpperCase()} <br />
                 {"and design systems".toUpperCase()}
               </span>
@@ -66,7 +69,7 @@ function ModelHero() {
               alt=""
             />
             <div className="w-full p-5 bg-[#0042E5] rounded-b-xl">
-              <span className="text-[50px]  font-anton leading-14 text-[#D3E1FF]">
+              <span className="lg:text-[50px] text-[40px]  font-anton lg:leading-14 leading-12 text-[#D3E1FF]">
                 {"Software".toUpperCase()} <br />
                 {"tttttvtsolutions".toUpperCase()}
               </span>
@@ -101,7 +104,7 @@ function ModelHero() {
         >
           <span
             className={clsx(
-              "text-[#343434] text-3xl",
+              "text-[#343434] lg:text-3xl text-xl",
               darkmode && "text-custom"
             )}
           >

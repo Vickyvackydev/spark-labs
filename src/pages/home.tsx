@@ -19,7 +19,7 @@ function Home() {
       <ComingSoon />
       <motion.div
         variants={animationVariants.container}
-        className="flex font-inter p-10 gap-x-5 items-start justify-between"
+        className="flex font-inter lg:p-10 p-5 gap-5 lg:flex-row flex-col items-start justify-between"
       >
         <motion.div
           variants={animationVariants.fadeInUp}
